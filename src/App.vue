@@ -14,6 +14,7 @@
 <script>
 
 export default {
+  
   data() {
     return {
       navIndex:0
@@ -28,12 +29,14 @@ export default {
 </script>
 
 <style lang='stylus' rel='stylesheet/stylus'>
-#app
-  $color = green
+@import './common/stylus/mixins.styl'
+$color = green
   btnStyle(w, h, bg)
     width w
     height h
+    border none 
     background bg
+#app
   h1
     color orange 
     background-color #aaaaaa
@@ -50,6 +53,9 @@ export default {
   ul
     li
       line-height 50px
+      // padding-left 50%
+      text-align center
+      bottom-border-1px($color)
       &.active
         color red
 </style>
