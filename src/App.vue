@@ -1,26 +1,20 @@
 <template>
   <div id="app">
-   <div id="example1"></div>
-   <div id="example2"></div>
+    <router-view></router-view>
+    <FooterGuide></FooterGuide>
   </div>
 </template>
 
-<script>
-
-export default {
-}
+<script type="text/ecmascript-6">
+import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+  export default {
+    components: {
+      FooterGuide
+  }
 </script>
 
-<style lang='stylus' rel='stylesheet/stylus'>
-@import './common/stylus/mixins.styl'
-
+<style lang="stylus" rel="stylesheet/stylus">
 #app
-  #example1 
-    width 375px
-    height 50px
-    background #aaaaaa
-  #example2
-    width 50px
-    height 50px
-    background hotpink
+  width 100%
+  height 100%
 </style>
